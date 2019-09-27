@@ -17,7 +17,7 @@ dao.Save = (data) => new Promise((resolve,reject)=>{
 })
 
 dao.Get = (tag) => new Promise((resolve,reject)=>{
-    const sql = 'SELECT * FROM dns WHERE tag = ? LIMIT 1 ;';
+    const sql = 'SELECT * FROM dns WHERE tag = ? ORDER BY iddns DESC LIMIT 1 ;';
     dao.sql_query(sql, [tag])
       .then((results) => {
         resolve(results);
