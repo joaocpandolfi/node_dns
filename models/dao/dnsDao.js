@@ -7,7 +7,7 @@ const dao = Object.create(daoBase);
 
 dao.Save = (data) => new Promise((resolve,reject)=>{
   const sql = 'INSERT INTO dns (tag,whook) VALUES (?);';
-  dao.sql_query(sql, [[data.tag,data.tag]])
+  dao.sql_query(sql, [[data.tag,data.whook]])
     .then((results) => {
       resolve(results);
     })
