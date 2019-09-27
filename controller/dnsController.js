@@ -4,6 +4,7 @@ const daoDNS  = require('../models/dao/dnsDao')
 var DNS = {}
 
 DNS.Register = (req, res) =>{
+    console.log(req.body)
     daoDNS.Save(req.body)
     .then((r)=>{
         res.send({success:true})
