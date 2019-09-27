@@ -4,7 +4,7 @@ const dnsRouter = require('./dns')
 router.use('/', dnsRouter)
 
 router.get('*', function(req, res){
-  res.render('404.hbs')
+  res.send('EERRRRROUUUUU')
 });
 
 module.exports = router
