@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-var cookieParser = require('cookie-parser')
 var bodyParser = require('body-parser')
 var morgan = require("morgan")
 var helmet = require("helmet")
@@ -12,15 +11,13 @@ const router = require('./routes');
 const config = require('./configurations/constants')
 const gf = require('./configurations/globalFunctions')
 
+var useHHTPS = false;
 
 //Logs
 app.use(morgan("common"))
 
 // Security
 app.use(helmet())
-
-// Cookie parser
-app.use(cookieParser())
 
 // Body parser
 app.use(bodyParser.urlencoded({
