@@ -1,0 +1,29 @@
+{
+    "name": "DNS-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+      "start": "nodemon app.js",
+      "pm2": "pm2 stop server.json && pm2 start server.json"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+ssh://git@github.com/joaocpandolfi/node_dns.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/joaopandolfi/node_dns/issues"
+    },
+    "homepage": "https://github.com/joaopandolfi/node_dns#README",
+    "dependencies": {
+      "express": "^4.16.4",
+      "helmet": "^3.18.0",
+      "mysql": "^2.16.0",
+      "node-fetch": "^2.3.0",
+      "nodemon": "^1.18.4",
+      "read-chunk": "^3.1.0"
+    }
+  }
+  
