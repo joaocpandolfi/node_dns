@@ -14,6 +14,7 @@ DNS.Register = (req, res) =>{
 }
 
 DNS.Get = (req,res) =>{
+    console.log("AQUI")
     daoDNS.Get(req.params.tag)
     .then(r=>{
         if(r.data.length != 0)
